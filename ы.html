@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Дратути</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<style type="text/css"> html,body {
+		height: 100%;
+		font-family: roboto;
+		background: #edc0ea;
+
+	}
+	h1 {color: #397eed;}
+
+		h3 {
+		color: red;
+	}
+	h2 {color: green;}
+	body {display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		}
+	h4 {display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;}
+	p {display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;}
+</style>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 26, 2022 00:01:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "дней " + hours + "часов "
+  + minutes + "минут " + seconds + "секунд ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</head>
+<body>
+<h1>Ромчик!</h1>
+<h1>Лучше посмотри сайты с курсами чем бухать! </h1>
+<h2>У тебя осталось: <span id="countdown"></span></h2>
+<h3>Cписок курсов:</h3>
+<div><a href="https://vk.com/away.php?to=https%3A%2F%2Fsberuniversity.ru%2Flearning%2Fprogrammes%2Fopen-programmes%2F12810%2F%23reviews&cc_key=" target="_blank">Курс от сбера</a></div>
+<div> <a href="https://netology.ru/programs/javascript-coding-for-beginners#/feedback" target="_blank">Курс от Нетологии который мне понравился <mark> больше </mark></a>
+<h4>Как глянешь черкани мне:</h4>
+<p>Телефон: +7 952 872 82 26</p>
+<p>Ну или в вк: <a href="https://vk.com/shapove" target="_blank">vk.com/shapove</a></p>
+</body>
+</html>
